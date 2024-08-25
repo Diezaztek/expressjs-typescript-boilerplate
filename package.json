@@ -1,0 +1,40 @@
+{
+  "name": "expressjs-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "Backend boilerplate for express with typescript",
+  "main": "server.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "npm run build && node dist/server.js",
+    "build": "tsc",
+    "dev": "nodemon",
+    "migration:generate": "npx sequelize-cli migration:generate --name",
+    "migration:run": "tsc && npx sequelize-cli --config dist/configs/database.config.js db:migrate"
+  },
+  "author": "@pacot",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^9.9.0",
+    "express": "^4.19.2",
+    "inversify": "^6.0.2",
+    "mysql2": "^3.11.0",
+    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/sequelize": "^4.28.20",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "sequelize-cli": "^6.6.2",
+    "sqlite3": "^5.1.7",
+    "ts-jest": "^29.2.5"
+  }
+}
